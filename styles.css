@@ -51,6 +51,8 @@ h1 {
 .content img {
     width: auto;
     height: auto;
+    margin: center;
+    size: 50%;
     display: block;
 }
 
