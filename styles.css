@@ -1,0 +1,116 @@
+body {
+
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion-item {
+    display: block;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+}
+
+/* Верхняя часть */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+/* Иконка */
+.icon {
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+/* Контент */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.content img {
+    width: 100%;
+    display: block;
+}
+
+/* Открытое состояние */
+input:checked + .accordion-item .content {
+    max-height: 500px;
+}
+
+input:checked + .accordion-item .icon {
+    transform: rotate(45deg);
+}
+
+input:checked + .accordion-item .top {
+    color: #00bcd4;
+}
+
+/* Hover только если есть мышь */
+@media (hover: hover) {
+    .accordion-item:hover .top {
+        color: #00bcd4;
+    }
+
+    .accordion-item:hover .icon {
+        transform: rotate(45deg);
+    }
+
+    .accordion-item:hover .content {
+        max-height: 200px;
+    }
+}
+
+
+/* телефон */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .top {
+        font-size: 16px;
+    }
+}
+
+/* планшет */
+@media (min-width: 481px) and (max-width: 900px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .top {
+        font-size: 18px;
+    }
+}
+
+/* десктоп */
+@media (min-width: 901px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .top {
+        font-size: 20px;
+    }
+}
