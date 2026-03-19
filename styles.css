@@ -55,7 +55,7 @@ h1 {
 
 /* Открытое состояние */
 input:checked + .accordion-item .content {
-    max-height: 500px;
+    max-height: 1000px;
 }
 
 input:checked + .accordion-item .icon {
